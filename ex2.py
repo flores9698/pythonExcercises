@@ -11,11 +11,18 @@ def isEven(number):
 	return False
 
 
+if len(sys.argv)==2:
+	number= float(sys.argv[1])
+	if isEven(number):
+		print("The number {} is even.".format(number))
+	else:
+		print("The number {} is odd.".format(number))
 
-number= float(sys.argv[1])
-
-if isEven(number):
-	print("The number {} is even.".format(number))
 else:
-	print("The number {} is odd.".format(number))
+	number= float(input("Enter a number you want to know if its even or odd"))
+	if isEven(number):
+		print("The number {} is even.".format(number))
+	else:
+		print("The number {} is odd.".format(number))
+
 
